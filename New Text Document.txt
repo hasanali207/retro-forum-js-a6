@@ -1,0 +1,1 @@
+lg:space-x-5 sm:space-y-5 lg:space-y-0

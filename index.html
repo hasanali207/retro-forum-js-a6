@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro</title>
+    <!-- google font  Mulish-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome link  -->
+    <script
+      src="https://kit.fontawesome.com/445fe39a6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="py-4">
+      <div class="container">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center py-10"
+        >
+          <div>
+            <h1 class="mulish text-3xl text-black font-extrabold">Logo Text</h1>
+          </div>
+
+          <div class="flex justify-between items-center space-x-7">
+            <div class="navbar flex items-center space-x-4">
+              <div
+                class="tooltip bg-gray-200 rounded-full border border-gray-400 text-xl p-2 px-3 h-15 w-15"
+                data-tip="Home"
+              >
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <div
+                class="tooltip bg-gray-200 rounded-full border border-gray-400 text-xl p-2 px-3 h-15 w-15"
+                data-tip="Contact"
+              >
+                <i class="fa-solid fa-pencil"></i>
+              </div>
+              <div
+                class="tooltip bg-gray-200 rounded-full border border-gray-400 text-xl p-2 px-3 h-15 w-15"
+                data-tip="People"
+              >
+                <i class="fa-solid fa-user-plus"></i>
+              </div>
+              <div
+                class="tooltip bg-gray-200 rounded-full border border-gray-400 text-xl p-2 px-3 h-15 w-15"
+                data-tip="Area"
+              >
+                <i class="fa-regular fa-flag"></i>
+              </div>
+            </div>
+            <div class="end">
+              <button
+                class="btn rounded-full bg-[#797DFC] text-white w-28 text-xl"
+              >
+                Sign In
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <!-- banner design  -->
+      <section>
+        <div class="container">
+          <div
+            class="banner h-[100vh] bg-bottom bg-no-repeat bg-cover bg-[#12132D] rounded-lg"
+            style="background-image: url(images/bgbanner.png)"
+          >
+            <div
+              class="banner-content flex justify-around items-center h-full px-4 text-white"
+            >
+              <div>
+                <h1 class="text-6xl font-extrabold">Welcome to the <br /></h1>
+                <h1 class="text-6xl font-extrabold mt-4">
+                  <span class="gradient-text">ReTro</span> Forum
+                </h1>
+                <p class="text-xl font-medium mt-5 mb-8">
+                  Share your favorite opinion and win and wp forum coffee mug!
+                </p>
+
+                <div
+                  class="flex justify-between rounded-full shadow-sm overflow-hidden h-full w-[400px] bg-white p-2"
+                >
+                  <input
+                    type="text"
+                    id="input-field"
+                    class="px-3 py-2 focus:outline-none  rounded-l-md bg-white text-[#1D1D2a]"
+                    placeholder="Search here anything"
+                  />
+                  <button
+                    type="submit"
+                    onclick = "handleSearch()"
+                    id="search-btn"
+                    class="px-4 py-2 rounded-full bg-[#797DFC] text-white font-bold w-fit"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+              <div
+                class="bg-white w-[350px] p-8 rounded-lg text-2xl font-medium text-[#12132D80]"
+              >
+                <ul class="flex justify-between">
+                  <li>Registered Users</li>
+                  <li>01</li>
+                </ul>
+                <ul class="flex justify-between my-5">
+                  <li>Forum</li>
+                  <li>05</li>
+                </ul>
+                <ul class="flex justify-between my-5">
+                  <li>Topics</li>
+                  <li>50</li>
+                </ul>
+                <ul class="flex justify-between">
+                  <li>Replies</li>
+                  <li>89</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="py-20">
+        <h1 class="text-center text-5xl font-extrabold">Let’s Discuss</h1>
+        <p class="text-center inter text-[#12132D] font-normal my-8">
+          Yes, you can run unit tests and view the results directly within the
+          app. <br />
+          The integrated testing features allow for a streamlined .
+        </p>
+        <!-- all post section start -->
+        <div class="container  flex flex-col lg:flex-row justify-between  my-6 lg:space-x-5 sm:space-y-5 lg:space-y-0">
+         <div id="post-container">
+          
+          <!-- append single post  -->
+
+         </div>
+          <div class="view-container bg-[#F3F3F5] rounded-xl p-6">
+              <div class="flex items-center justify-between">
+                <h2 class="font-bold text-xl">Title</h2>
+                <div class="flex ">
+                  <img src="images/Frame.png" alt="" >
+                  <p>Mark as read (<span id="view-count">0</span>)</p>
+                </div>
+              </div>
+            <div class="bg-white flex p-6 mt-4">
+              <h1 class="text-xl font-black my-4">
+                10 Kids Unaware of Their Halloween Costume
+              </h1>
+              <div>
+                <div class="flex items-center justify-center mt-6">
+                  <i class="fa-regular fa-eye"></i>
+                  <p class="ml-2">1560</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
