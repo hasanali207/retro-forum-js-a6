@@ -141,7 +141,7 @@
     </header>
 
     <main>
-      <section class="py-20">
+      <section class="py-20 container">
         <h1 class="text-center text-5xl font-extrabold">Let’s Discuss</h1>
         <p class="text-center inter text-[#12132D] font-normal my-8">
           Yes, you can run unit tests and view the results directly within the
@@ -155,7 +155,9 @@
             
 
         <!-- all post section start -->
-        <div class="container  flex flex-col lg:flex-row justify-between  my-6 lg:space-x-5 sm:space-y-5 lg:space-y-0">
+
+        
+        <div class=" flex flex-col lg:flex-row justify-between  my-6 lg:space-x-5 sm:space-y-5 lg:space-y-0">
           
         
          <div id="post-container" class=" w-full lg:w-[60%]">
@@ -181,7 +183,51 @@
               
           </div>
           </div>
+        
       </section>
+
+      <!-- join forum  -->
+      <section>
+        <div class="container">
+          <div class="hero bg-[#12132D] p-8 rounded-lg">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <img src="images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
+              <div>
+                <h1 class="text-5xl font-bold text-white">Box Office News!</h1>
+                <p class="py-6 text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <button
+                    type="submit"
+                    onclick = "handleSearch()"
+                    id="search-btn"
+                    class="px-4 py-2 rounded-full bg-[#797DFC] text-white font-bold w-fit"
+                  >
+                    Register Now
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- latest news section  -->
+
+      <section class="py-20 container">
+        <h1 class="text-center text-5xl font-extrabold">Latest Post</h1>
+        <p class="text-center inter text-[#12132D] font-normal my-8">
+          Yes, you can run unit tests and view the results directly within the
+          app. <br />
+          The integrated testing features allow for a streamlined .
+        </p>
+
+        <div id="latest-post-container" class="grid grid-cols-1 lg:grid-cols-3 mt-10 gap-4">
+          
+        </div>
+      </section>
+
+
+
+
+
     </main>
 
     <footer></footer>
