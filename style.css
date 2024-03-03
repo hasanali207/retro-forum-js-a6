@@ -34,32 +34,4 @@ body {
   border-radius: 24px;
   cursor: pointer;
 }
-.online {
-  position: relative;
-}
-.online::after {
-  content: "";
-  width: 12px;
-  height: 12px;
-  background: rgb(0, 245, 0);
-  border: 2px solide #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  right: 5px;
-}
 
-.offline {
-  position: relative;
-}
-.offline::after {
-  content: "";
-  width: 12px;
-  height: 12px;
-  background: rgb(245, 29, 0);
-  border: 2px solide #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 0px;
-  right: 5px;
-}
