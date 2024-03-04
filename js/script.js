@@ -21,11 +21,11 @@ const loadAllPost = async (searchValue="comedy" ) =>{
         
 
         const div = document.createElement('div')
-        div.classList = 'flex flex-col lg:flex-row space-x-4  bg-[#F3F3F5] rounded-xl p-10 mb-6'
+        div.classList = 'flex flex-col lg:flex-row space-x-4 bg-[#F3F3F5] hover:bg-[#797DFC20] rounded-xl p-10 mb-6'
         div.innerHTML = `
         <div id="profile-thumb" class="profile-img">
           <div class="relative">
-            <div class="w-4 h-4 rounded-full absolute top-0 right-0 ${post?.isActive ? "bg-#10B981]" : "bg-[#FF3434]"} "> </div>
+            <div class="w-4 h-4 rounded-full absolute top-0 right-0 ${item?.isActive ? "bg-[#10B981]" : "bg-[#FF3434]"} "> </div>
               <img class="" src="${item.image}" alt="" />
           </div>
         
@@ -60,7 +60,7 @@ const loadAllPost = async (searchValue="comedy" ) =>{
         
     });
     
-    setTimeout(loadingSpinner(false), 2000)
+    setTimeout(loadingSpinner, 2000, false)
     
 
 
@@ -136,14 +136,14 @@ const latestPost = async () =>{
               <img src="${item.cover_image}" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body">
-              <p class="text-[#12132D80]"><i class="fa-solid fa-calendar-check"></i> ${item.author.posted_date}</p>
+              <p class="text-[#12132D80]"><i class="fa-solid fa-calendar-check"></i> ${item.author.posted_date?item.author.posted_date:'No Publish Date'}</p>
               <h2 class="card-title text-[#12132D] font-extrabold">${item.title}</h2>
               <p class="text-[#12132D] font-normal">${item.description}</p>
               <div class="author-details flex items-center space-x-6 mt-2">
                 <img class="w-14 rounded-full" src="${item.profile_image}" alt="">
                 <div>
                   <h1 class="text-[#12132D] font-extrabold">${item.author.name}</h1>
-                  <p class="text-[#12132D80]">${item.author.designation}</p>
+                  <p class="text-[#12132D80]">${item.author.designation?item.author.designation:'Unknown'}</p>
                 </div>
               </div>
             </div>
