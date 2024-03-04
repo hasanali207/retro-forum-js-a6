@@ -12,12 +12,11 @@ const allPostDefault =  async () =>{
       const div = document.createElement('div')
       div.classList = 'flex flex-col lg:flex-row space-x-4 bg-[#F3F3F5] hover:bg-[#797DFC20] rounded-xl p-10 mb-6'
       div.innerHTML = `
-      <div id="profile-thumb" class="profile-img">
+      <div id="profile-thumb" class="profile-img lg:mb-0 mb-4">
         <div class="relative">
           <div class="w-4 h-4 rounded-full absolute top-0 right-0 ${item?.isActive ? "bg-[#10B981]" : "bg-[#FF3434]"} "> </div>
             <img class="" src="${item.image}" alt="" />
         </div>
-      
     </div>
     <div class="w-full">
       <div class="flex space-x-5 items-center">
@@ -69,7 +68,7 @@ const loadAllPost = async (searchValue) =>{
         const div = document.createElement('div')
         div.classList = 'flex flex-col lg:flex-row space-x-4 bg-[#F3F3F5] hover:bg-[#797DFC20] rounded-xl p-10 mb-6'
         div.innerHTML = `
-        <div id="profile-thumb" class="profile-img">
+        <div id="profile-thumb" class="profile-img lg:mb-0 mb-4">
           <div class="relative">
             <div class="w-4 h-4 rounded-full absolute top-0 right-0 ${item?.isActive ? "bg-[#10B981]" : "bg-[#FF3434]"} "> </div>
               <img class="" src="${item.image}" alt="" />
