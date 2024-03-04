@@ -2,7 +2,8 @@ const allPostDefault =  async () =>{
   const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts`);
   const data = await res.json();
   const post = data.posts;
-    
+
+  
     const postContainer = document.getElementById('post-container');
     // let profileThumb = document.getElementById('profile-thumb');
     postContainer.innerHTML = ''
@@ -53,7 +54,7 @@ const allPostDefault =  async () =>{
 
 allPostDefault();
 
-const loadAllPost = async (searchValue ) =>{
+const loadAllPost = async (searchValue) =>{
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchValue}`);
     const data = await res.json();
     const post = data.posts;
@@ -118,7 +119,7 @@ const readCount = document.getElementById("view-count");
 const readMe = (title, view_count) =>{
   
   const div = document.createElement('div')
-  div.classList = 'bg-white flex p-4 justify-between items-center mt-4'
+  div.classList = 'bg-white flex p-4 justify-between items-center mt-4 rounded-xl'
   div.innerHTML = `
   <h1 class="font-black my-4">
                    ${title}
@@ -142,26 +143,6 @@ const readMe = (title, view_count) =>{
 
  
  
-}
-
-
-
-const handleSearch = () =>{
-  loadingSpinner(true);
- const searchText   = document.getElementById('input-field').value;
- 
- loadAllPost(searchText);
-  
-  
-}
-loadAllPost();
-const loadingSpinner = (isLoading) =>{
-  const loader = document.getElementById('loading');
-  if(isLoading){
-    loader.classList.remove('hidden')
-  }else{
-    loader.classList.add('hidden')
-  }
 }
 
 
@@ -202,6 +183,23 @@ const latestPost = async () =>{
 }
 
 latestPost();
+const handleSearch = () =>{
+  loadingSpinner(true);
+ const searchText   = document.getElementById('input-field').value;
+ 
+ loadAllPost(searchText);
+  
+  
+}
+loadAllPost();
+const loadingSpinner = (isLoading) =>{
+  const loader = document.getElementById('loading');
+  if(isLoading){
+    loader.classList.remove('hidden')
+  }else{
+    loader.classList.add('hidden')
+  }
+}
 
 
 
