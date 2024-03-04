@@ -9,6 +9,7 @@ const allPostDefault =  async () =>{
     postContainer.innerHTML = ''
     post.forEach((item) => {
     
+     
       const div = document.createElement('div')
       div.classList = 'flex flex-col lg:flex-row space-x-4 bg-[#F3F3F5] hover:bg-[#797DFC20] rounded-xl p-10 mb-6'
       div.innerHTML = `
@@ -38,7 +39,7 @@ const allPostDefault =  async () =>{
           <li><i class="fa-regular fa-clock"></i> ${item.posted_time}min</li>
         </ul>
         <div>
-          <button onclick="readMe('${item.title}', '${item.view_count}')" class="btn btn-active btn-accent text-white rounded-full"><i class="fa-regular fa-envelope-open"></i></button>
+          <button onclick="readMe('${item.title.replace(/'/g,'')}', '${item.view_count}')" class="btn btn-active btn-accent text-white rounded-full"><i class="fa-regular fa-envelope-open"></i></button>
         </div>
       </div>
     </div>
@@ -82,7 +83,7 @@ const loadAllPost = async (searchValue) =>{
         </div>
         <div>
           <h1 class="text-xl font-black my-4">
-            ${item.title}
+          ${item.title}
           </h1>
           <p class="text-[#12132D60] font-normal">
             ${item.description}
@@ -95,7 +96,7 @@ const loadAllPost = async (searchValue) =>{
             <li><i class="fa-regular fa-clock"></i> ${item.posted_time}min</li>
           </ul>
           <div>
-            <button onclick="readMe('${item.title}', '${item.view_count}')" class="btn btn-active btn-accent text-white rounded-full"><i class="fa-regular fa-envelope-open"></i></button>
+            <button onclick="readMe('${item.title.replace(/'/g, ' ')}', '${item.view_count}')" class="btn btn-active btn-accent text-white rounded-full"><i class="fa-regular fa-envelope-open"></i></button>
           </div>
         </div>
       </div>
@@ -154,8 +155,7 @@ const latestPost = async () =>{
     const latestPostContainer = document.getElementById('latest-post-container');
     
     post.forEach((item) => {
-      console.log(item);
-      
+
       const div = document.createElement('div');
       div.classList = 'card  bg-base-100 border border-gray-300';
       div.innerHTML = `
