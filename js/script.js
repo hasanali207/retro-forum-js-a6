@@ -48,7 +48,8 @@ const allPostDefault =  async () =>{
       postContainer.appendChild(div)
       
   });
-      
+  
+  
 
 }
 

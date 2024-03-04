@@ -1,3 +1,0 @@
-lg:space-x-5 sm:space-y-5 lg:space-y-0
-
-https://github.com/Programming-Hero-Web-Course4/b9a6-retro-forum-hasanali207
